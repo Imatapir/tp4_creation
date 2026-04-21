@@ -5,6 +5,7 @@ travaux pratiques. Remplacez \<lien\> par les liens Figma pour chacun
 des éléments livrables. Assurez-vous que vos documents Figma sont
 accessibles par tous.
 
-- Charte graphique : \<lien\>
+- Charte graphique : https://www.figma.com/design/IM2cavxdfkWhEERDDEp1dx/Tp_Interface_01?node-id=122-2&t=p1Qd3SX2Md65pgIZ-1
 - Maquette conceptuelle : \<lien\>
 - Maquette graphique : \<lien\>
+
