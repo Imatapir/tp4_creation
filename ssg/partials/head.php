@@ -8,8 +8,11 @@
 </head>
 <body>
 <header class="header">
-    <h1 class="logo header__logo">AquanNord</h1>
-    <h5 class="text header__locations">Laval - Blainville - Rive-Nord</h5>
+    <div class="header__logo">
+        <h1 class="logo header__h1">AquanNord</h1>
+        <p class="text header__locations">Laval - Blainville - Rive-Nord</p>
+    </div>
+
 </header>
 
 <?php partial('nav') ?>
