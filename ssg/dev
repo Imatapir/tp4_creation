@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PROJECT_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+SRC_DIR="$PROJECT_ROOT/public"
+SSG_BOOTSTRAP="$PROJECT_ROOT/ssg.php"
+HOST="127.0.0.1"
+PORT="8000"
+
+main() {
+  php \
+    -d auto_prepend_file="$SSG_BOOTSTRAP" \
+    -S "$HOST:$PORT" \
+    -t "$SRC_DIR"
+}
+
+main "$@"
