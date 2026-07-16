@@ -219,6 +219,23 @@ body {
     display: block;
 }
 
+/* Couleur active (page courante) */
+.nav__link--current {
+    background-color: var(--color-primaire-A);
+    color: var(--color-secondaire-B);
+}
+
+/* Couleur au clic (état actif pendant le clic) */
+.nav__link:active {
+    background-color: var(--color-primaire-A);
+    color: var(--color-secondaire-B);
+}
+
+/* Affichage desktop vs mobile */
+.nav__item--mobile {
+    display: none;
+}
+
 .footer {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -327,7 +344,6 @@ body {
         text-align: center;
     }
 
-    /* NAV : items empilés, pleine largeur chacun */
     .nav {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -341,6 +357,14 @@ body {
     .nav__link {
     padding: 16px 0;
     height: auto;
+    }
+
+    .nav__item--desktop {
+        display: none;
+    }
+
+    .nav__item--mobile {
+        display: flex;
     }
 
     .footer {

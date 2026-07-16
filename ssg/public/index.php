@@ -1,8 +1,6 @@
 <?php partial('head') ?>
 
-<h1>Home
-
-</h1>
+<h1>Acceuil</h1>
 
 <p>
     This page corresponds to <code>public/index.php</code>.
