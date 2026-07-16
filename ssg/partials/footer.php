@@ -30,7 +30,7 @@
         </div>
 
         <div class="footer__phone">
-            <h3 class="textTitles footer__title"></h3>
+            <h3 class="textTitles footer__title">Téléphone</h3>
             <p class="text footer__text">514-919-8028</p>
             <p class="text footer__text">514-619-8028</p>
         </div>

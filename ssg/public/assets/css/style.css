@@ -155,7 +155,7 @@ body {
 .nav {
     background-color: var(--color-secondaire-A);
     color: var(--color-primaire-A);
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     display: grid;
@@ -222,13 +222,19 @@ body {
 
 .footer__socials {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
+    background-color: var(--color-secondaire-A);
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    margin-bottom: 20px;
 }
 
 .footer__socials img {
-    width: calc((100% - 11 * 20px) / 12 + 20px);
+    width: 32px; /* remplace par la taille exacte de ton Figma */
+    height: auto;
 }
 
 .footer__center {
@@ -254,6 +260,7 @@ body {
 
 .footer__grid-item {
     text-align: center;
+    padding: 6px 0px ;
 }
 
 .footer__right {
@@ -267,10 +274,11 @@ body {
 
 .footer__horaire {
     grid-row: 1;
-    align-self: center;
+    align-self: top;
 }
 
 .footer__association {
     grid-row: 2;
     align-self: end;
+    margin-bottom: 20px;
 }
