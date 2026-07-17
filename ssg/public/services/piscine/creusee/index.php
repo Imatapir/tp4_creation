@@ -30,9 +30,10 @@
     <div class="piscine__intro">
         <h2 class="mainText piscine__titre">Solutions complètes pour piscines hors terre sur la Rive-Nord, à Laval et Blainville</h2>
         <p class="text piscine__lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. AquaNord se spécialise en remplacement
-            de toile de piscine hors terre. Que vous soyez sur la Rive-Nord, à Laval ou à Blainville,
-            nos professionnels d'expérience se déplacent afin de répondre à tous vos besoins.
+            AquaNord se spécialise en remplacement de toile de piscine hors terre. Que vous soyez sur la Rive-Nord, 
+            à Laval ou à Blainville, nos professionnels d'expérience se déplacent afin de répondre à tous vos besoins 
+            en matière d'installation et d'entretien de piscine hors terre.
+
         </p>
         <p class="text piscine__lead">
             Nous mettons à votre disposition une gamme de piscines hors terre durables et de qualité.

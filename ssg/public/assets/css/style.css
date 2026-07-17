@@ -758,4 +758,8 @@ margin: 0 auto;
         max-width: 100%;
         width: 100%;
     }
+
+    .piscine__lead, .piscine__approche-texte {
+        text-align: left;
+    }
 }
