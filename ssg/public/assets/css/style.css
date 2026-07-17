@@ -1,47 +1,45 @@
+/* polices */
+
 @font-face {
-        font-family: 'Aquawax';
-        src: url('/assets/fonts/Aquawax Black Trial.ttf') format('truetype');
-        font-weight: 900;      /* Black = 900 */
-        font-style: normal;
-        font-display: swap;
-    }
+    font-family: 'Aquawax';
+    src: url('/assets/fonts/Aquawax Black Trial.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
-        font-family: 'Aquawax';
-        src: url('/assets/fonts/Aquawax Medium Trial.ttf') format('truetype');
-        font-weight: 500;      /* Medium = 500 */
-        font-style: normal;
-        font-display: swap;
-    }
+    font-family: 'Aquawax';
+    src: url('/assets/fonts/Aquawax Medium Trial.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
-        font-family: 'Aquawax';
-        src: url('/assets/fonts/Aquawax Light Trial.ttf') format('truetype');
-        font-weight: 300;      /* Light = 300 */
-        font-style: normal;
-        font-display: swap;
-    }
+    font-family: 'Aquawax';
+    src: url('/assets/fonts/Aquawax Light Trial.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
     font-family: 'Satoshi';
     src: url('/assets/fonts/satoshi-variable.ttf') format('truetype-variations');
-    font-weight: 100 900; 
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
-:root {
-    /* === COULEURS === */
-    --color-primaire-A: #005F89;       
-    --color-primaire-B: #0093B7;      
-    --color-secondaire-A: #E6ECEB;       
-    --color-secondaire-B: #FFFFFF;          
-    
-    /* === TYPOGRAPHIE === */
+/* variables */
 
-    /* Font-Family */
+:root {
+    --color-primaire-A: #005F89;
+    --color-primaire-B: #0093B7;
+    --color-secondaire-A: #E6ECEB;
+    --color-secondaire-B: #FFFFFF;
+
     --ff-Aquawax: 'Aquawax', 'Satoshi', Inter, system-ui, sans-serif;
     --ff-Satoshi: 'Satoshi', Inter, system-ui, sans-serif;
 
-
-    /* === Font-Size - Line-Height - Letter-Spacing */
     --fs-logo: 4rem;            --lh-logo: 5rem;                --ls-logo: -0.1em;
     --fs-mainText: 4rem;        --lh-mainText: 4.5rem;          --ls-mainText: -0.015em;
     --fs-sectionTitles: 2rem;   --lh-sectionTitles: 2.25rem;    --ls-sectionTitles: -0.005em;
@@ -50,6 +48,8 @@
     --fs-text: 1rem;            --lh-text: 1.625rem;            --ls-text: -0.02em;
     --fs-smallText: 0.875rem;   --lh-smallText: 1.375rem;       --ls-smallText: -0.02em;
 }
+
+/* typographie */
 
 .logo {
     font-family: var(--ff-Aquawax);
@@ -107,63 +107,31 @@
     letter-spacing: var(--ls-smallText);
 }
 
+/* base */
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     max-width: 42rem;
-    margin: 0 auto;
+    margin: 3rem auto;
     padding: 0 1rem;
     font-family: system-ui, sans-serif;
     line-height: 1.5;
 }
+
 .site-nav {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
 }
 
-.nav {
-    background-color: transparent;
-    color: var(--color-primaire-A);
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 20px;
-    padding: 15px 20px;
-}
-
-.nav__item {
-    grid-column: span 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: var(--color-secondaire-A);
-    border-radius: 8px;
-}
-
-.nav__link {
-    display: block;
-    width: 100%;
-    padding: 8px 0;
-    color: var(--color-primaire-A);
-    text-decoration: none;
-}
-
-.nav__link:hover {
-    background-color: var(--color-primaire-A);
-    color: var(--color-secondaire-B);
-    border-radius: 8px;
-}
-
-.nav__link--actif {
-    background-color: var(--color-primaire-A);
-    color: var(--color-secondaire-B);
-    border-radius: 8px;
-}
-
 .current {
     font-weight: 700;
 }
+
+/* header */
 
 .header {
     background-color: var(--color-primaire-A);
@@ -175,6 +143,7 @@ body {
     grid-template-rows: 200px;
     column-gap: 20px;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .header__h1 {
@@ -192,49 +161,89 @@ body {
     margin-top: 20px;
 }
 
-.nav {
-    background-color: var(--color-secondaire-A);
-    color: var(--color-primaire-A);
-    border-radius: 10px;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 20px;
-    padding: 15px 20px;
-}
+/* nav */
 
 .nav-wrapper {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     background-color: var(--color-primaire-A);
+    padding: 0 20px 30px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+}
+
+.nav {
+    background-color: var(--color-secondaire-A);
+    color: var(--color-primaire-A);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 70px;
+    column-gap: 20px;
     padding: 0 20px;
 }
 
-.nav__item {    grid-column: span 2; /* 12 colonnes / 6 items = 2 colonnes chacun */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.nav__item {
+    grid-column: span 2;
     position: relative;
 }
 
 .nav__link {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
 }
 
 .nav__submenu {
     list-style: none;
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
-    display: none; /* caché par défaut */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
+    background-color: var(--color-secondaire-A);
+    border-radius: 0 0 10px 10px;
+    min-width: 100%;
+    z-index: 100;
+}
+
+.nav__sublink {
+    display: block;
+    padding: 10px 20px;
+}
+
+.nav__sublink:hover,
+.nav__link:hover {
+    background-color: var(--color-primaire-B);
+    color: var(--color-secondaire-B);
 }
 
 .nav__item:hover .nav__submenu {
     display: block;
 }
+
+.nav__link--current {
+    background-color: var(--color-primaire-A);
+    color: var(--color-secondaire-B);
+}
+
+.nav__link:active {
+    background-color: var(--color-primaire-A);
+    color: var(--color-secondaire-B);
+}
+
+.nav__item--mobile {
+    display: none;
+}
+
+/* footer */
 
 .footer {
     width: 100vw;
@@ -247,6 +256,7 @@ body {
     padding: 0 20px;
     background-color: #005F89;
     color: var(--color-secondaire-A);
+    box-sizing: border-box;
 }
 
 .footer__left {
@@ -273,7 +283,7 @@ body {
 }
 
 .footer__socials img {
-    width: 32px; /* remplace par la taille exacte de ton Figma */
+    width: 32px;
     height: auto;
 }
 
@@ -300,7 +310,7 @@ body {
 
 .footer__grid-item {
     text-align: center;
-    padding: 6px 0px ;
+    padding: 6px 0;
 }
 
 .footer__right {
@@ -314,7 +324,7 @@ body {
 
 .footer__horaire {
     grid-row: 1;
-    align-self: top;
+    align-self: center;
 }
 
 .footer__association {
@@ -323,18 +333,173 @@ body {
     margin-bottom: 20px;
 }
 
+/* page piscine hors-terre / piscine creusée */
 
-/* Page filtration et système au sel */
+.piscine {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.piscine__intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.piscine__lead {
+    color: var(--color-primaire-B);
+    margin-bottom: 16px;
+}
+
+.piscine__lead:last-child {
+    margin-bottom: 0;
+}
+
+.piscine__titre {
+    color: var(--color-primaire-A);
+}
+
+.piscine__services {
+    background-color: var(--color-secondaire-A);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.piscine__services-titre {
+    color: var(--color-primaire-A);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.piscine__services-liste {
+    list-style: disc;
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+
+.piscine__services-item {
+    padding: 4px 0;
+    color: var(--color-primaire-B);
+}
+
+.piscine__approche {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.piscine__approche-titre {
+    color: var(--color-primaire-A);
+    margin-bottom: 16px;
+}
+
+.piscine__approche-texte {
+    color: var(--color-primaire-B);
+}
+
+/* carousel */
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.carousel__viewport {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+
+.carousel__arrow-outer {
+    width: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primaire-B);
+}
+
+.carousel__arrow-outer--left {
+    clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+}
+
+.carousel__arrow-outer--right {
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+.carousel__arrow-inner {
+    width: 21px;
+    height: 28px;
+    display: block;
+    background-color: var(--color-primaire-A);
+}
+
+.carousel__arrow-inner--left {
+    clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+}
+
+.carousel__arrow-inner--right {
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+.carousel__btn:hover .carousel__arrow-inner {
+    background-color: var(--color-secondaire-A);
+}
+
+.piscine__image-wrapper {
+width: 100%;  
+max-width: 700px;
+margin: 0 auto;
+}
+
+.piscine__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* page filtration et système au sel */
 
 .produit {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     padding: 40px 20px;
+    box-sizing: border-box;
 }
 
 .produit__intro {
     text-align: center;
-    margin-bottom: 30px;
+    max-width: 700px;
+    margin: 0 auto 30px;
 }
 
 .produit__modeles {
@@ -421,11 +586,13 @@ body {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     padding: 40px 20px;
+    box-sizing: border-box;
 }
 
 .contact__intro {
     text-align: center;
-    margin-bottom: 30px;
+    max-width: 700px;
+    margin: 0 auto 30px;
 }
 
 .contact__contenu {
@@ -472,9 +639,6 @@ body {
     padding: 8px;
     border: 1px solid var(--color-primaire-B);
     border-radius: 4px;
-    box-sizing: border-box;
-    font-family: var(--ff-Satoshi);
-
 }
 
 .contact__champ--zone {
@@ -502,10 +666,6 @@ body {
 }
 
 .contact__info-texte {
-    color: var(--color-primaire-A);
-}
-
-.contact__info-texte {
     color: var(--color-primaire-B);
 }
 
@@ -521,80 +681,81 @@ body {
     text-decoration: none;
 }
 
-/* mobile */
+/* divers */
 
 .nav__toggle,
 .nav__bouton {
     display: none;
 }
 
+/* mobile */
+
 @media (max-width: 700px) {
+
     .header {
-        grid-template-rows: auto;
-        padding: 20px;
+        grid-template-columns: 1fr;
+        justify-items: center;
         text-align: center;
     }
 
     .header__h1 {
-        grid-column: 1 / -1;
+        grid-column: 1;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .nav__item {
+        grid-column: 1;
+        width: 100%;
+    }
+
+    .nav__link {
+        padding: 16px 0;
+        height: auto;
+    }
+
+    .nav__item--desktop {
+        display: none;
+    }
+
+    .nav__item--mobile {
+        display: flex;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .footer__left,
+    .footer__center,
+    .footer__right {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .footer__right {
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
-    .nav-wrapper {
-        padding: 0;
+    .footer__association {
+        align-self: center;
+        width: 100%;
     }
 
-    .nav__bouton {
-        display: block;
-        background-color: var(--color-primaire-A);
-        color: var(--color-secondaire-B);
-        text-align: center;
-        padding: 12px;
-        cursor: pointer;
+    .carousel {
+        width: 100%;
     }
 
-    .nav.nav {
-        display: none;
-        grid-template-columns: 1fr;
-        column-gap: 0;
-        padding: 0;
-        background-color: var(--color-primaire-A);
-    }
-
-    .nav__toggle:checked ~ .nav.nav {
-        display: grid;
-    }
-
-    .nav .nav__item {
-        border-radius: 0;
-        border-bottom: 1px solid var(--color-secondaire-B);
-        background-color: transparent;
-    }
-
-    .nav .nav__link {
-        color: var(--color-secondaire-B);
-        padding: 12px 0;
-    }
-
-    .nav .nav__submenu {
-        position: static;
-        display: block;
-        background-color: var(--color-primaire-A);
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    .nav .nav__submenu a {
-        display: block;
-        color: var(--color-secondaire-B);
-        text-decoration: none;
-        padding: 8px 0;
-    }
-
-    .nav .nav__item {
-        display: block;
+    .piscine__services {
+        max-width: 100%;
+        width: 100%;
     }
 }
-
